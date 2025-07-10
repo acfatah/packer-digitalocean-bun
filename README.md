@@ -1,6 +1,16 @@
 # Packer DigitalOcean Bun
 
+<p>
+  <a href="https://github.com/acfatah/packer-digitalocean-bun/commits/main">
+    <img
+      alt="GitHub last commit (by committer)"
+      src="https://img.shields.io/github/last-commit/acfatah/packer-digitalocean-bun?display_timestamp=committer&style=flat-square"></a>
+</p>
+
 A Packer template for creating a DigitalOcean image with [Bun][1] installed.
+
+> [!WARNING]
+> This is experimental and should be used at your own risk.
 
 
 ## Software Included
@@ -9,9 +19,6 @@ A Packer template for creating a DigitalOcean image with [Bun][1] installed.
 | ---         | ---         | ---     |
 | [Bun][1]    | [1.2.x][2]  | [MIT][3] |
 | [Nginx][4]  | [1.17.x][5] | [Artistic License 2.0][6] |
-
-> [!WARNING]
-> This is experimental and should be used at your own risk.
 
 
 ## Prerequisite
