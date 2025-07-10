@@ -41,6 +41,9 @@ To run with debugging information,
 ```sh
 PACKER_LOG=1 packer build -color=false template.pkr.hcl 2>&1 | tee build.log
 ```
+
+By default, the snapshot will be created on `sgp1` region. To change it, add `-var region={region}` or use environmental variable `PKR_VAR_region={region}`.
+
 ## Implementation Details
 
 The image searches for a Bun application in `/root/app` and executes `bun run start` within that directory. For more information, see 
