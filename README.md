@@ -36,6 +36,11 @@ packer build template.json
 
 After a successful build, the image `snapshot bun-20-04-snapshot-{timestamp}` will be available in the `Backups & Snapshots` section of your DigitalOcean account.
 
+To run with debugging information,
+
+```sh
+PACKER_LOG=1 packer build -debug template.json 2>&1 | tee build.log
+```
 ## Implementation Details
 
 The image searches for a Bun application in `/root/app` and executes `bun run start` within that directory. For more information, see 
