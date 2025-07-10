@@ -10,6 +10,9 @@ EOM
 
 source /root/.digitalocean_passwords
 
+# Set the INSTANCE_ID environment variable
+echo "INSTANCE_ID=${INSTANCE_ID}" | sudo tee -a /etc/environment > /dev/null
+
 # Set the Bun user password
 echo "${BUN_USER}:${BUN_USER_PASSWORD}" | chpasswd -
 
