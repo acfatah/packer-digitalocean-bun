@@ -25,12 +25,6 @@ variable "apt_packages" {
   default = "nginx"
 }
 
-variable "do_api_token" {
-  type      = string
-  default   = "${env("DIGITALOCEAN_API_TOKEN")}"
-  sensitive = true
-}
-
 variable "region" {
   type    = string
   default = "sgp1"
@@ -48,8 +42,9 @@ locals {
 # build blocks. A build block runs provisioner and post-processors on a
 # source. Read the documentation for source blocks here:
 # https://www.packer.io/docs/templates/hcl_templates/blocks/source
+# https://developer.hashicorp.com/packer/integrations/digitalocean/digitalocean/latest/components/builder/digitalocean
 source "digitalocean" "bun-ubuntu-24-04-snapshot" {
-  api_token     = "${var.do_api_token}"
+  # api_token should specified via environment variable DIGITALOCEAN_TOKEN or DIGITALOCEAN_ACCESS_TOKEN
   image         = "ubuntu-24-04-x64"
   region        = "${var.region}"
   size          = "s-1vcpu-512mb-10gb"

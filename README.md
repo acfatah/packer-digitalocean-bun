@@ -23,7 +23,7 @@ A Packer template for creating a DigitalOcean image with [Bun][1] installed.
 
 ## Prerequisite
 
-- A [DigitalOcean][21] account and the `DIGITALOCEAN_API_TOKEN` environment variable are required.
+- A [DigitalOcean][21] account and the `DIGITALOCEAN_TOKEN` or `DIGITALOCEAN_ACCESS_TOKEN` environment variable are required.
 - [Packer](https://developer.hashicorp.com/packer) must be installed.
 - The [DigitalOcean Packer Plugin](https://developer.hashicorp.com/packer/integrations/digitalocean/digitalocean) must be installed.
 
