@@ -1,0 +1,9 @@
+{
+  "name": "bun-app",
+  "version": "0.0.0",
+  "description": "Hello from bun!",
+  "main": "server.ts",
+  "scripts": {
+    "start": "bun run server.ts",
+  }
+}

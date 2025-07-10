@@ -1,0 +1,21 @@
+#!/bin/bash -x
+exec > >(tee /var/log/one_click_setup.log) 2>&1
+
+# Generate some passwords
+cat > /root/.digitalocean_passwords <<EOM
+INSTANCE_ID=$(uuidgen)
+BUN_USER=bun
+BUN_USER_PASSWORD=$(openssl rand -hex 16)
+EOM
+
+source /root/.digitalocean_passwords
+
+# Set the Bun user password
+echo "${BUN_USER}:${BUN_USER_PASSWORD}" | chpasswd -
+
+# Remove the ssh force logout command
+sed -e '/Match User root/d' \
+    -e '/.*ForceCommand.*droplet.*/d' \
+    -i /etc/ssh/sshd_config
+
+systemctl restart ssh

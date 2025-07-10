@@ -1,0 +1,18 @@
+[Unit]
+Description=Bun App
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/app
+ExecStart=/root/.bun/bin/bun run start
+Restart=always
+RestartSec=3
+User=root
+Environment=NODE_ENV=production
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=bun-app
+
+[Install]
+WantedBy=multi-user.target
