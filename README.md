@@ -31,7 +31,7 @@ A Packer template for creating a DigitalOcean image with [Bun][1] installed.
 ## Usage
 
 ```sh
-packer build template.json
+packer build template.pkr.hcl
 ```
 
 After a successful build, the image `snapshot bun-20-04-snapshot-{timestamp}` will be available in the `Backups & Snapshots` section of your DigitalOcean account.
@@ -39,7 +39,7 @@ After a successful build, the image `snapshot bun-20-04-snapshot-{timestamp}` wi
 To run with debugging information,
 
 ```sh
-PACKER_LOG=1 packer build -debug template.json 2>&1 | tee build.log
+PACKER_LOG=1 packer build -color=false template.pkr.hcl 2>&1 | tee build.log
 ```
 ## Implementation Details
 
