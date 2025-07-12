@@ -21,6 +21,9 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
+	# Uncomment the following line to enable Cloudflare IP filtering
+	# include cloudflare-ip-filter.conf;
+
 	# SSL configuration
 	#
 	# listen 443 ssl default_server;

@@ -111,6 +111,7 @@ build {
     scripts = [
       "scripts/010-bun.sh",
       "scripts/011-certbot.sh",
+      "scripts/012-nginx-cloudflare-ip-filter.sh",
       "common/scripts/014-ufw-nginx.sh",
       "common/scripts/018-force-ssh-logout.sh",
       "common/scripts/020-application-tag.sh",
