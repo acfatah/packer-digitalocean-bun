@@ -35,7 +35,7 @@ variable "region" {
 # Read the documentation for locals blocks here:
 # https://www.packer.io/docs/templates/hcl_templates/blocks/locals
 locals {
-  image_name = "bun-ubuntu-24-04-snapshot-${formatdate("YYYYMMDDhhmmZ",timestamp())}"
+  image_name = "bun-ubuntu-24-04-snapshot-${formatdate("YYYYMMDDhhmmZ", timestamp())}"
 }
 
 # source blocks are generated from your builders; a source can be referenced in
