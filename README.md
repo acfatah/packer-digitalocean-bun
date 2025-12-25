@@ -1,16 +1,18 @@
 # Packer DigitalOcean Bun
 
 <p>
+  <a href="./LICENSE">
+    <img alt="GitHub" src="https://img.shields.io/github/license/acfatah/packer-digitalocean-bun?style=flat-square"></a>
   <a href="https://github.com/acfatah/packer-digitalocean-bun/commits/main">
     <img
       alt="GitHub last commit (by committer)"
       src="https://img.shields.io/github/last-commit/acfatah/packer-digitalocean-bun?display_timestamp=committer&style=flat-square"></a>
 </p>
 
-A Packer template for creating a DigitalOcean image with [Bun][1] installed.
+A Packer template for creating a DigitalOcean image with [Bun][1] pre-installed.
 
-> [!WARNING]
-> This is experimental and should be used at your own risk.
+> [!TIP]
+> See also [ubuntu-bun-server-setup](https://github.com/acfatah/ubuntu-bun-server-setup) for a bash script to setup Bun server on Ubuntu image.
 
 
 ## Software Included
